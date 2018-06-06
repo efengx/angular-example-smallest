@@ -30,6 +30,13 @@ ng update
 |--test.ts
 ```
 
+### demo
+```text
+http://localhost:4200/demo/dashboard
+http://localhost:4200/demo/navigation
+http://localhost:4200/demo/table
+```
+
 ### documents
 ```text
 https://angular.io/guide/quickstart
