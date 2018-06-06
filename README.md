@@ -1,7 +1,7 @@
 # README
 angular6
 
-### setup
+### setup (development tools: WebStorm)
 ```text
 npm i
 ```
