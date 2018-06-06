@@ -1,0 +1,10 @@
+### dist ####
+#dist/
+
+### javascript ###
+node_modules/
+
+
+### configure ###
+package-lock.json
+.idea/
