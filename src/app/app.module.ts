@@ -4,20 +4,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Select2Module } from 'ng2-select2';
-import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from './material/material.module';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
-    NgbModule.forRoot(),
-    Select2Module,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -28,10 +29,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   declarations: [
     AppComponent,
+    DashboardComponent,
     LoginComponent,
-    DashboardComponent
   ],
+  entryComponents: [ AppComponent ],
+  bootstrap: [ AppComponent ],
   providers: [],
-  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
