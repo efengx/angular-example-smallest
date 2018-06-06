@@ -1,9 +1,13 @@
 # README
 angular6
 
-### config setup npm node
+### setup
 ```text
 npm i
+```
+
+### ng command
+```text
 ng g component my-new-component
 ng d directive my-new-directive
 ng g pipe my-new-pipe
@@ -30,5 +34,3 @@ ng update
 ```text
 https://angular.io/guide/quickstart
 ```
-
-
