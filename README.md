@@ -1,9 +1,10 @@
 # README
 angular6
 
-### setup (development tools: WebStorm)
+### setup and build (development tools: WebStorm)
 ```text
 npm i
+npm run build
 ```
 
 ### ng command
@@ -21,13 +22,14 @@ ng update
 
 ### file structure
 ```text
-|--src          // root
-|--|--app       // component
-|--|--assect    // resource
-|--main.ts      // configuration file
-|--index.html 
-|--styles.css 
-|--test.ts
+|--src             // root
+|--|--app          // component
+|--|--assect       // resource
+|--|--main.ts      // main configuration file
+|--|--index.html 
+|--|--styles.scss 
+|--|--test.ts
+|--dist            // Compiled code
 ```
 
 ### demo
@@ -42,7 +44,7 @@ http://localhost:4200/demo/table
 https://angular.io/guide/quickstart
 ```
 
-- angular material
+- angular material document
 ```text
 https://material.angular.io/
 https://github.com/angular/material2
