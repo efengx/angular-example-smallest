@@ -9,7 +9,7 @@ import {FileNode} from './entity/file-node';
 import {FileFlatNode} from './entity/file-flat-node';
 
 @Component({
-  selector: 'dashboard',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   providers: [FileDatabaseService]
