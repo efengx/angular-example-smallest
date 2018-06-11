@@ -57,5 +57,3 @@ import { DemoComponent } from './demo/demo.component';
   providers: [],
 })
 export class AppModule { }
-
-platformBrowserDynamic().bootstrapModule(AppModule);
