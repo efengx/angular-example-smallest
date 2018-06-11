@@ -14,16 +14,29 @@ const host = "http://localhost:"
 })
 export class UserService {
 
+  users: User[] =[
+    {id: 1, username: 'dabao', password: '123'},
+    {id: 2, username: 'x', password: '321'}
+  ];
+
   constructor(
     private http: HttpClient
   ) { }
 
   get(id: number): Observable<User> {
-    return this.http.get<User>('http://localhost:9080/propertyName/' + id, httpOptions);
+    // return this.http.get<User>('http://localhost:9080/propertyName/' + id, httpOptions);
+    const l = this.users.length;
+    for (let i = 0; i< l; i++) {
+      if (this.users[i].id === id) {
+        return of(this.users[i]);
+      }
+    }
+    return of(null);
   }
 
-  find(name: string): Observable<User[]> {
-    return this.http.get<User[]>('?name=' + name, httpOptions);
+  find(name?: string): Observable<User[]> {
+    // return this.http.get<User[]>('?name=' + name, httpOptions);
+    return of(this.users);
   }
 
   create(user: User): Observable<User> {
@@ -35,7 +48,16 @@ export class UserService {
   }
 
   patch(user: User): Observable<User> {
-    return this.http.patch<User>('', user, httpOptions);
+    // return this.http.patch<User>('', user, httpOptions);
+    const l = this.users.length;
+    for (let i = 0; i< l; i++) {
+      if (this.users[i].id === user.id) {
+        this.users[i].username = user.username;
+        this.users[i].password = user.password;
+        return of(this.users[i]);
+      }
+    }
+    return of(null);
   }
 
   login(user: User): Observable<User>  {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {UserService} from '../../../service/user.service';
 import {User} from '../../../entity/user';
+import {UserService} from '../../../service/user.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-route-page',
@@ -10,21 +10,28 @@ import {User} from '../../../entity/user';
 })
 export class RoutePageComponent implements OnInit {
 
-  labelPosition: string;
-  user: User;
+  user: User = { username: '', password: ''};
 
   constructor(
     private userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('pkId');
-    alert(id);
-    // this.userService.get(parseInt(id, 10)).subscribe( user => {
-    //   this.user = user;
-    //   console.log(user);
-    // });
+    const id = this.route.snapshot.paramMap.get('id');
+    this.userService.get(parseInt(id, 10)).subscribe(user => {
+      this.user = user;
+    })
   }
 
+  update() {
+    this.userService.patch(this.user).subscribe(user => {
+      if (user) {
+        this.router.navigateByUrl('/base/page');
+      } else {
+        alert('update error')
+      }
+    });
+  }
 }

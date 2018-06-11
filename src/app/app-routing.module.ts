@@ -14,6 +14,16 @@ import {RegisterComponent} from './component/register/register.component';
 const routes: Routes = [
   { path: '', redirectTo: '/demo', pathMatch: 'full' },
   {
+    path: 'demo',
+    component: DemoComponent,
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      }
+    ]
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },
@@ -24,6 +34,16 @@ const routes: Routes = [
   {
     path: 'base',
     component: BaseComponent,
+    children: [
+      {
+        path: 'page',
+        component: PageComponent,
+      },
+      {
+        path: 'route-page/:id',
+        component: RoutePageComponent,
+      }
+    ]
   }
 ];
 

@@ -56,4 +56,3 @@ https://github.com/angular/material2
 2. 所有的数据操作在service中实现
 3. 所有的对象在entity目录中创建
 4. service按照资源类型进行创建
-

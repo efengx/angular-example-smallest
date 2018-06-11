@@ -10,7 +10,8 @@ import {MaterialModule} from './material.module';
 import { LoginComponent } from './component/login/login.component';
 import { NavigationComponent } from './demo/navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule,
+import { MatToolbarModule,
+  MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule,
   MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { TableComponent } from './demo/table/table.component';
 import { DemoComponent } from './demo/demo.component';

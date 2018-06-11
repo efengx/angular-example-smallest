@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../../entity/user';
 import {UserService} from '../../../service/user.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-page',
@@ -10,12 +11,20 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class PageComponent implements OnInit {
 
-  dataSource: User[] = [];
+  dataSource: User[];
+  constructor(
+    private router: Router,
+    private userSerivce: UserService
+  ) { }
 
-  displayedColumns = ['id', 'name', 'age'];
+  ngOnInit() {
+    this.userSerivce.find().subscribe( users => {
+      this.dataSource = users;
+    });
+  }
 
-  constructor() { }
-
-  ngOnInit() {}
+  openDetail(id: number) {
+    this.router.navigateByUrl('/base/route-page/' + id);
+  }
 
 }

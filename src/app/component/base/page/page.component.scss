@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+tr {
+  height: 48px;
+}
+
+tr > td:first-child,
+tr > th:first-child{
+  padding-left: 24px;
+}
+
+tr > th {
+  text-align: left;
+}
+
+tr > th,
+tr > td {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
