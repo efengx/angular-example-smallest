@@ -1,0 +1,21 @@
+<div class="grid-container">
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>
+        card 1 checkbox
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="dashboard-card-content">
+      <div class="example-container">
+        <mat-form-field *ngIf="user">
+          <input matInput [(ngModel)]="user.pkId" placeholder="pkId">
+        </mat-form-field>
+
+        <mat-form-field *ngIf="user">
+          <input matInput [(ngModel)]="user.name" placeholder="name">
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

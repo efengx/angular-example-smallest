@@ -15,6 +15,8 @@ export class NavigationComponent {
       map(result => result.matches)
     );
 
+  birthday = new Date(1988, 3, 15);
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }

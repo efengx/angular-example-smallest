@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './demo/dashboard/dashboard.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule} from './material/material.module';
+import {MaterialModule} from './component/material/material.module';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './component/login/login.component';
 import { NavigationComponent } from './demo/navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { TableComponent } from './demo/table/table.component';
 import { DemoComponent } from './demo/demo.component';
+import { BaseComponent } from './component/base/base.component';
+import { PageComponent } from './component/base/page/page.component';
+import { RoutePageComponent } from './component/base/route-page/route-page.component';
+import { RegisterComponent } from './component/register/register.component';
 
 @NgModule({
   imports: [
@@ -51,6 +55,10 @@ import { DemoComponent } from './demo/demo.component';
     NavigationComponent,
     TableComponent,
     DemoComponent,
+    BaseComponent,
+    PageComponent,
+    RoutePageComponent,
+    RegisterComponent,
   ],
   entryComponents: [ AppComponent ],
   bootstrap: [ AppComponent ],

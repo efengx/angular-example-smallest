@@ -15,7 +15,6 @@ import {FileFlatNode} from './entity/file-flat-node';
   providers: [FileDatabaseService]
 })
 export class DashboardComponent implements OnInit {
-  @Input() test: string;
 
   // card 1
   checked = false;

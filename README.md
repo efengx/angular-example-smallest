@@ -50,3 +50,10 @@ https://angular.io/
 https://material.angular.io/
 https://github.com/angular/material2
 ```
+
+- 约定
+1. 所有的显示/页面组件，让如app/component目录
+2. 所有的数据操作在service中实现
+3. 所有的对象在entity目录中创建
+4. service按照资源类型进行创建
+
