@@ -1,6 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import { TableDataSource } from './table-datasource';
+
+
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
+
 
 @Component({
   selector: 'app-table',
@@ -10,12 +19,12 @@ import { TableDataSource } from './table-datasource';
 export class TableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  dataSource: TableDataSource;
+  datas: TableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name'];
 
   ngOnInit() {
-    this.dataSource = new TableDataSource(this.paginator, this.sort);
+    this.datas = new TableDataSource(this.paginator, this.sort);
   }
 }
