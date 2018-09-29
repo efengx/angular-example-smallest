@@ -2,6 +2,7 @@
 #dist/
 
 ### javascript ###
+node_modules
 node_modules/
 
 
