@@ -19,6 +19,8 @@ import { BaseComponent } from './component/base/base.component';
 import { PageComponent } from './component/base/page/page.component';
 import { RoutePageComponent } from './component/base/route-page/route-page.component';
 import { RegisterComponent } from './component/register/register.component';
+import {LoginRouteGuard} from './activate/login-route-guard';
+import {BaseService} from './service/base.service';
 
 @NgModule({
   imports: [
@@ -63,6 +65,9 @@ import { RegisterComponent } from './component/register/register.component';
   ],
   entryComponents: [ AppComponent ],
   bootstrap: [ AppComponent ],
-  providers: [],
+  providers: [
+    BaseService,
+    LoginRouteGuard
+  ],
 })
 export class AppModule { }

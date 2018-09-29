@@ -2,8 +2,6 @@ import {DataSource} from '@angular/cdk/collections';
 import {MatPaginator, MatSort} from '@angular/material';
 import {merge, Observable, of } from 'rxjs';
 import {map} from 'rxjs/operators';
-import {UserService} from '../../../service/user.service';
-
 
 export interface PeriodicElement {
   name: string;

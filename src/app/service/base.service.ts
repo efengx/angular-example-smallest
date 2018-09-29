@@ -16,4 +16,12 @@ export class BaseService {
     }
     return of(null);
   }
+
+  isUser(): Observable<boolean> {
+    const user = localStorage.getItem('user');
+    if (user) {
+      return of(true);
+    }
+    return of(false);
+  }
 }
