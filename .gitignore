@@ -2,11 +2,8 @@
 dist/
 
 ### javascript ###
-node_modules
 node_modules/
-
 
 ### configure ###
 package-lock.json
 .idea/
-.idea
